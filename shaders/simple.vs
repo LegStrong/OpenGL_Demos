@@ -5,10 +5,10 @@ layout(location=1) in vec3 vColor;
 
 uniform mat4 MVP;
 
-out vec3 fragementColor;
+out vec3 fragmentColor;
 
 void main() {
     gl_Position = MVP*vec4(vPos, 1);
     
-    fragementColor = vColor;
+    fragmentColor = vColor;
 }

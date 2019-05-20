@@ -14,10 +14,11 @@ add_subdirectory (external)
 include_directories(
 	external/glfw-3.3/include/
 	external/glm-0.9.7.1/
-	external/glew-1.13.0/include/
+	external/glew-2.1.0/include/
     external/glm/
-    common/
-	.
+	external/assimp-4.1.0/include/
+	include/
+	samples/
 )
 
 # 所有库
@@ -38,11 +39,11 @@ add_definitions(
 
 # 添加可执行文件
 add_executable (OpenGL_Demos
-    main.cpp
-    demo.cpp
-    democube.cpp
+    samples/main.cpp
+    samples/demo.cpp
+    samples/democube.cpp
 
-    common/shader.cpp
+    src/shader.cpp
 )
 
 # 添加依赖库
